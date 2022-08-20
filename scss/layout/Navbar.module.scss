@@ -3,26 +3,111 @@
 .wrapper {
   padding: u.rem(26) 0;
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: u.rem(30);
+  gap: u.rem(20);
 
-  .logo {
-    width: u.rem(280);
-    cursor: pointer;
-  }
-
-  .socialIcons {
-    border: 2px solid red;
-    display: flex;
+  .top {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
+    gap: u.rem(30);
 
-    a {
-      display: flex;
+    .logo {
+      width: u.rem(280);
+      cursor: pointer;
     }
 
-    & > :not(:last-child) {
-      margin-right: u.rem(10);
+    .right {
+      & > :not(:last-child) {
+        margin-bottom: u.rem(10);
+      }
+    }
+
+    .socialIcons {
+      $size: 10;
+      $icon-box-size: 20;
+
+      display: flex;
+      align-items: center;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: u.rem($icon-box-size);
+        height: u.rem($icon-box-size);
+
+        border-radius: 50%;
+        color: white;
+      }
+
+      & > a:nth-child(1) {
+        background-color: #1877f2;
+        font-size: u.em($size);
+      }
+      & > a:nth-child(2) {
+        background-color: #1da1f3;
+        font-size: u.em($size);
+      }
+      & > a:nth-child(3) {
+        background-color: #1877f2;
+        font-size: u.em($size);
+      }
+      & > a:nth-child(4) {
+        background-color: #25d366;
+        font-size: u.em($size);
+      }
+
+      & > :not(:last-child) {
+        margin-right: u.em(10);
+      }
+    }
+
+    .dropdownBtn {
+      display: flex;
+      align-items: center;
+
+      & > span {
+        display: flex;
+        font-size: 1.4rem;
+      }
+
+      & > :not(:last-child) {
+        margin-right: u.rem(6);
+      }
+    }
+  }
+
+  .bottom {
+    background-color: #f30000;
+    border-radius: u.rem(8);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .links_left {
+      display: flex;
+
+      & > a {
+        margin: u.rem(10) 0;
+        padding: u.rem(0) u.rem(25);
+      }
+
+      & > a {
+        border-right: u.rem(1) solid white;
+      }
+    }
+
+    .links_right {
+      .account_btn {
+        padding: u.rem(10) u.rem(38);
+        background: #0061a3;
+        border-radius: u.rem(8);
+      }
     }
   }
 }

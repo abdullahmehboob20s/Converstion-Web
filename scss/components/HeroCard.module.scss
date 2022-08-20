@@ -1,0 +1,26 @@
+@use "../utils" as u;
+
+.card {
+  padding: u.rem(18) u.rem(18);
+  border: 1px solid #e0e0e0;
+  border-radius: u.rem(8);
+  display: flex;
+  align-items: center;
+
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+  }
+
+  .card_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & > :not(:last-child) {
+    margin-right: u.rem(10);
+  }
+}

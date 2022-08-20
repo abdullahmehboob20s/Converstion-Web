@@ -1,0 +1,28 @@
+@use "../utils" as u;
+
+.wrapper {
+  padding: u.rem(26) 0;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: u.rem(30);
+
+  .logo {
+    width: u.rem(280);
+    cursor: pointer;
+  }
+
+  .socialIcons {
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex;
+    }
+
+    & > :not(:last-child) {
+      margin-right: u.rem(10);
+    }
+  }
+}

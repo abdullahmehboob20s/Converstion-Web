@@ -1,4 +1,5 @@
 import Hero from "layouts/Hero";
+import Lottery from "layouts/Lottery";
 import Navbar from "layouts/Navbar";
 import React from "react";
 
@@ -10,6 +11,9 @@ function index() {
       </div>
       <div className="mb-100px">
         <Hero />
+      </div>
+      <div className="mb-100px">
+        <Lottery />
       </div>
     </div>
   );

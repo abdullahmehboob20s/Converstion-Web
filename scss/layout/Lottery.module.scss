@@ -1,0 +1,7 @@
+@use "../utils" as u;
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: u.rem(16);
+}

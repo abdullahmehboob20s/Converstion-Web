@@ -1,0 +1,76 @@
+@use "../utils" as u;
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: u.rem(8);
+  overflow: hidden;
+
+  main {
+    padding: u.rem(16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .imageWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: u.rem(141);
+      height: u.rem(80);
+      border: 2px solid #e0e0e0;
+      border-radius: 50%;
+    }
+
+    .titles {
+      .cardTitle {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        & > :not(:last-child) {
+          margin-right: 0.5rem;
+        }
+      }
+
+      & > :not(:last-child) {
+        margin-bottom: u.rem(6);
+      }
+    }
+
+    & > :not(:last-child) {
+      margin-right: u.rem(30);
+    }
+  }
+
+  footer {
+    background-color: #0061a3;
+    padding: u.rem(14);
+    display: flex;
+
+    & > button {
+      flex: 1;
+      background: #f7d300;
+      border-radius: u.rem(8);
+      padding: u.rem(9);
+    }
+
+    .timer {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > :not(:last-child) {
+        margin-right: u.rem(8);
+      }
+
+      & > span {
+        display: flex;
+        font-size: 1.4rem;
+        font-weight: 900;
+      }
+    }
+  }
+}

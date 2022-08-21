@@ -4,6 +4,7 @@
   padding: u.rem(26) 0;
   display: grid;
   gap: u.rem(20);
+  position: relative;
 
   .top {
     display: grid;
@@ -19,60 +20,6 @@
     .right {
       & > :not(:last-child) {
         margin-bottom: u.rem(10);
-      }
-    }
-
-    .socialIcons {
-      $size: 10;
-      $icon-box-size: 20;
-
-      display: flex;
-      align-items: center;
-
-      a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: u.rem($icon-box-size);
-        height: u.rem($icon-box-size);
-
-        border-radius: 50%;
-        color: white;
-      }
-
-      & > a:nth-child(1) {
-        background-color: #1877f2;
-        font-size: u.em($size);
-      }
-      & > a:nth-child(2) {
-        background-color: #1da1f3;
-        font-size: u.em($size);
-      }
-      & > a:nth-child(3) {
-        background-color: #1877f2;
-        font-size: u.em($size);
-      }
-      & > a:nth-child(4) {
-        background-color: #25d366;
-        font-size: u.em($size);
-      }
-
-      & > :not(:last-child) {
-        margin-right: u.em(10);
-      }
-    }
-
-    .dropdownBtn {
-      display: flex;
-      align-items: center;
-
-      & > span {
-        display: flex;
-        font-size: 1.4rem;
-      }
-
-      & > :not(:last-child) {
-        margin-right: u.rem(6);
       }
     }
   }
@@ -108,6 +55,261 @@
         background: #0061a3;
         border-radius: u.rem(8);
       }
+    }
+  }
+
+  .close_icon {
+    display: none;
+  }
+  .sidebarLogo {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .account {
+    display: none;
+  }
+
+  .mobileLinks {
+    display: none;
+  }
+
+  .socialIcons {
+    $size: 10;
+    $icon-box-size: 20;
+
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: u.rem($icon-box-size);
+      height: u.rem($icon-box-size);
+
+      border-radius: 50%;
+      color: white;
+    }
+
+    & > a:nth-child(1) {
+      background-color: #1877f2;
+      font-size: u.em($size);
+    }
+    & > a:nth-child(2) {
+      background-color: #1da1f3;
+      font-size: u.em($size);
+    }
+    & > a:nth-child(3) {
+      background-color: #1877f2;
+      font-size: u.em($size);
+    }
+    & > a:nth-child(4) {
+      background-color: #25d366;
+      font-size: u.em($size);
+    }
+
+    & > :not(:last-child) {
+      margin-right: u.em(10);
+    }
+  }
+
+  .dropdownBtn {
+    display: flex;
+    align-items: center;
+
+    & > span {
+      display: flex;
+      font-size: 1.4rem;
+    }
+
+    & > :not(:last-child) {
+      margin-right: u.rem(6);
+    }
+  }
+}
+
+@include u.breakpoint(large) {
+  .wrapper {
+    padding: u.rem(18) 0;
+
+    .top {
+      gap: u.rem(22);
+
+      .logo {
+        width: u.rem(240);
+      }
+
+      .left {
+        grid-column: 1/-1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .center {
+        grid-column: 1/-1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & > div {
+          margin-bottom: 0 !important;
+        }
+      }
+      .right {
+        display: none;
+      }
+    }
+
+    .bottom {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: u.rem(300);
+      height: 100%;
+      flex-direction: column;
+      border-radius: 0;
+      padding: 2.4rem;
+      justify-content: unset;
+      background-color: white;
+      transform: translateX(calc(-1 * u.rem(300)));
+      transition: all 0.3s ease;
+      z-index: 120;
+
+      &.active {
+        transform: translateX(0);
+      }
+
+      .links_left {
+        flex-direction: column;
+        flex: 1;
+
+        & > :not(:last-child) {
+          margin-bottom: 1.8rem;
+        }
+
+        & > a {
+          margin: u.rem(0) 0;
+          padding: u.rem(0) u.rem(0);
+          width: fit-content;
+          color: black;
+        }
+
+        & > a {
+          border-right: none;
+        }
+      }
+
+      .links_right {
+        & > :not(:last-child) {
+          margin-bottom: 1.2rem;
+        }
+
+        .account_btn {
+          text-align: center;
+        }
+      }
+    }
+
+    .sidebarLogo {
+      display: block;
+      margin-bottom: 2.6rem;
+      margin-top: 1rem;
+      width: 100%;
+    }
+
+    .close_icon {
+      display: block;
+      position: absolute;
+      top: 0.8rem;
+      right: 1.6rem;
+      font-size: 2rem;
+      color: black;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .hamburger {
+      display: flex;
+      font-size: 1.8rem;
+      color: #f30000;
+      cursor: pointer;
+    }
+
+    .account {
+      width: u.rem(30);
+      height: u.rem(30);
+      display: flex;
+      font-size: 1.2rem;
+      background: #0061a3;
+      border-radius: u.rem(4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .mobileLinks {
+      display: block;
+
+      & > :not(:last-child) {
+        margin-bottom: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .socialIcons {
+      $size: 16;
+      $icon-box-size: 30;
+
+      justify-content: space-evenly;
+
+      a {
+        width: u.rem($icon-box-size);
+        height: u.rem($icon-box-size);
+      }
+
+      & > a:nth-child(1) {
+        font-size: u.em($size);
+      }
+      & > a:nth-child(2) {
+        font-size: u.em($size);
+      }
+      & > a:nth-child(3) {
+        font-size: u.em($size);
+      }
+      & > a:nth-child(4) {
+        font-size: u.em($size);
+      }
+    }
+
+    .dropdownBtn {
+      margin: unset;
+    }
+  }
+}
+
+@include u.breakpoint(xsmall) {
+  .wrapper {
+    .top {
+      .logo {
+        width: u.rem(182);
+      }
+    }
+
+    .account {
+      width: u.rem(24);
+      height: u.rem(24);
+      font-size: 1rem;
+    }
+
+    .hamburger {
+      font-size: 1.4rem;
     }
   }
 }

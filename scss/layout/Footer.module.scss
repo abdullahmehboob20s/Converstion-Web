@@ -1,0 +1,115 @@
+@use "../utils" as u;
+
+.wrapper {
+  padding: u.rem(120) 0;
+  position: relative;
+  background: linear-gradient(
+    0deg,
+    rgba(224, 224, 224, 0.47) 0%,
+    rgba(225, 225, 225, 0.16) 20.75%,
+    rgba(255, 254, 254, 0.26) 84.14%,
+    #ffffff 126.52%
+  );
+
+  .stars {
+    position: absolute;
+    top: -6rem;
+    left: 50%;
+    width: 100%;
+    z-index: -10;
+    max-width: u.rem(1700);
+    transform: translateX(-50%);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .whatsappIcon {
+        width: u.rem(36);
+        height: u.rem(36);
+        background: #25d366;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border-radius: 50%;
+        font-size: u.rem(22);
+        cursor: pointer;
+      }
+
+      & > :not(:last-child) {
+        margin-right: u.rem(15);
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      & > :not(:last-child) {
+        margin-right: u.rem(10);
+      }
+
+      & > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: u.rem(36);
+        height: u.rem(36);
+        color: white;
+        border-radius: 50%;
+        font-size: u.rem(18);
+        cursor: pointer;
+      }
+
+      & > a:nth-child(1) {
+        background-color: #1877f2;
+      }
+      & > a:nth-child(2) {
+        background-color: #1da1f3;
+      }
+      & > a:nth-child(3) {
+        background-color: #1877f2;
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+
+    & > div:nth-child(2) {
+      max-width: u.rem(249);
+    }
+  }
+
+  .paymentMethods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: u.rem(10);
+
+    & > a {
+      display: flex;
+    }
+  }
+
+  .security {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > img {
+      width: 42%;
+    }
+
+    & > :not(:last-child) {
+      margin-right: u.rem(10);
+    }
+  }
+}

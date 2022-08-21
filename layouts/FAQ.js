@@ -4,8 +4,8 @@ import styles from "scss/layout/FAQ.module.scss";
 
 function FAQ() {
   return (
-    <div className={styles.wrapper}>
-      <div className="container-wrapper">
+    <div className="container-wrapper">
+      <div className={styles.wrapper}>
         <h1 className="black fs-24px weight-5 uppercase mb-30px">
           FREQUENTLY ASKED QUESTION (F.A.Q.)
         </h1>

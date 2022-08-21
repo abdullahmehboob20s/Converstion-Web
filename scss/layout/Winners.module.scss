@@ -1,0 +1,98 @@
+@use "../utils" as u;
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: u.rem(15);
+}
+
+.left {
+  & > main {
+    border: 1px solid #e0e0e0;
+    border-radius: u.rem(8);
+    padding: u.rem(20);
+
+    & > section {
+      display: grid;
+      grid-template-columns: 1fr 0.5fr;
+      gap: u.rem(15);
+
+      & > aside {
+        .lottries {
+          display: flex;
+          //   align-items: center;
+          justify-content: center;
+
+          & > h2 {
+            margin-top: 0.3em;
+          }
+
+          & > :not(:last-child) {
+            margin-right: u.rem(10);
+          }
+
+          .lottries_dates_cards {
+            display: flex;
+            align-items: center;
+
+            & > div {
+              background: #f30000;
+              border-radius: 50%;
+              width: 2em;
+              height: 2em;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            & > :not(:last-child) {
+              margin-right: u.rem(6);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .left_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > :not(:last-child) {
+      margin-right: u.rem(8);
+    }
+
+    & > img {
+      margin-right: u.rem(16) !important;
+    }
+  }
+}
+
+.right {
+  & > main {
+    display: grid;
+    gap: u.rem(20);
+
+    & > header {
+      border: 1px solid #e0e0e0;
+      border-radius: u.rem(8);
+      padding: u.rem(20);
+
+      & > .tickets {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > :not(:last-child) {
+          margin-right: u.rem(10);
+        }
+      }
+    }
+
+    & > footer {
+      display: grid;
+      gap: u.rem(16);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use "../utils" as u;
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: u.rem(8);
+  padding: u.rem(10) u.rem(16);
+  display: flex;
+  align-items: center;
+
+  & > :not(:last-child) {
+    margin-right: u.rem(16);
+  }
+}
+
+.country {
+  display: flex;
+  align-items: center;
+
+  & > :not(:last-child) {
+    margin-right: u.rem(5);
+  }
+}
+
+.image {
+  border: 2px solid transparent;
+  width: u.rem(80);
+}

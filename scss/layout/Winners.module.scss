@@ -96,3 +96,83 @@
     }
   }
 }
+
+@include u.breakpoint(large) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: u.rem(32);
+  }
+
+  .left {
+    & > main {
+      & > section {
+        display: grid;
+        grid-template-columns: 1fr 0.6fr;
+        gap: u.rem(15);
+      }
+    }
+  }
+}
+
+@include u.breakpoint(medium) {
+  .left {
+    & > main {
+      & > section {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: u.rem(15);
+
+        & > div {
+          text-align: center;
+
+          & > div {
+            margin-bottom: u.rem(20);
+          }
+
+          & > button {
+            width: 80%;
+          }
+        }
+      }
+    }
+
+    .left_title {
+      & > img {
+        width: u.rem(40);
+        margin-right: u.rem(10) !important;
+      }
+    }
+  }
+}
+
+@include u.breakpoint(small) {
+  .left {
+    & > main {
+      & > section {
+        & > aside {
+          .lottries {
+            & > h2 {
+              margin-top: 0.1em;
+            }
+            .lottries_dates_cards {
+              display: flex;
+              align-items: center;
+
+              & > div {
+                background: #f30000;
+                border-radius: 50%;
+                width: u.rem(20);
+                height: u.rem(20);
+                font-size: 11px;
+              }
+
+              & > :not(:last-child) {
+                margin-right: u.rem(4);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

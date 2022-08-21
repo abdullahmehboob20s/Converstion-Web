@@ -53,60 +53,70 @@ function Footer() {
           <div>
             <h2 className="fs-16px black weight-5 mb-15px">USEFUL LINKS</h2>
 
-            <div>
-              <Link href="/">
-                <a className="block w-fit fs-16px black weight-4 mb-5px">
-                  Lottery Results & Winners
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="block w-fit fs-16px black weight-4 mb-5px">
-                  Lottery Promotions
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="block w-fit fs-16px black weight-4 mb-5px">
-                  About Us
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="block w-fit fs-16px black weight-4 mb-5px">
-                  Contact Us
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="block w-fit fs-16px black weight-4 mb-5px">
-                  Terms & Conditions
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="block w-fit fs-16px black weight-4 mb-5px">
-                  Security
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="block w-fit fs-16px black weight-4 mb-5px">
-                  Privacy Policy
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="block w-fit fs-16px black weight-4 mb-5px"></a>
-              </Link>
-              <Link href="/">
-                <a className="block w-fit fs-16px black weight-4 mb-5px">
-                  Acceptable Use Policy
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="block w-fit fs-16px black weight-4 mb-5px">
-                  Website Use Policy
-                </a>
-              </Link>
-              <Link href="/">
-                <a className="block w-fit fs-16px black weight-7 mb-5px">
-                  Affiliate program
-                </a>
-              </Link>
+            <div className={styles.externalLinks}>
+              <div>
+                <Link href="/">
+                  <a className="block w-fit fs-16px black weight-4 mb-5px">
+                    Home
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="block w-fit fs-16px black weight-4 mb-5px">
+                    Lottery Results & Winners
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="block w-fit fs-16px black weight-4 mb-5px">
+                    Lottery Promotions
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="block w-fit fs-16px black weight-4 mb-5px">
+                    About Us
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="block w-fit fs-16px black weight-4 mb-5px">
+                    Contact Us
+                  </a>
+                </Link>
+              </div>
+
+              <div>
+                <Link href="/">
+                  <a className="block w-fit fs-16px black weight-4 mb-5px">
+                    Terms & Conditions
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="block w-fit fs-16px black weight-4 mb-5px">
+                    Security
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="block w-fit fs-16px black weight-4 mb-5px">
+                    Privacy Policy
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="block w-fit fs-16px black weight-4 mb-5px"></a>
+                </Link>
+                <Link href="/">
+                  <a className="block w-fit fs-16px black weight-4 mb-5px">
+                    Acceptable Use Policy
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="block w-fit fs-16px black weight-4 mb-5px">
+                    Website Use Policy
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="block w-fit fs-16px black weight-7 mb-5px">
+                    Affiliate program
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
           <div>
@@ -126,11 +136,13 @@ function Footer() {
               </p>
             </div>
           </div>
-          <div>
-            <h2 className="fs-16px black weight-5 mb-15px">PAYMENT METHODS</h2>
 
+          <div className={styles.paymentsAndSecurity}>
             <div>
-              <div className={`${styles.paymentMethods} mb-30px`}>
+              <h2 className="fs-16px black weight-5 mb-15px">
+                PAYMENT METHODS
+              </h2>
+              <div className={`${styles.paymentMethods}`}>
                 <Link href="/">
                   <a target="_blank">
                     <img src="images/visa.png" alt="" className="w-full" />
@@ -181,18 +193,38 @@ function Footer() {
                   </a>
                 </Link>
               </div>
+            </div>
 
-              <div>
-                <h2 className="fs-16px black weight-5 mb-15px">
-                  SECURITY & TRUST
-                </h2>
-                <div className={styles.security}>
-                  <img src="images/nov.png" alt="" />
-                  <img src="images/secure.png" alt="" />
-                </div>
+            <div>
+              <h2 className="fs-16px black weight-5 mb-15px">
+                SECURITY & TRUST
+              </h2>
+              <div className={styles.security}>
+                <img src="images/nov.png" alt="" />
+                <img src="images/secure.png" alt="" />
+              </div>
+
+              <div className={styles.right}>
+                <Link href="/">
+                  <a target="_blank">
+                    <FaFacebookF />
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a target="_blank">
+                    <FaTwitter />
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a target="_blank">
+                    <FaFacebookMessenger />
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
+
+          {/*  */}
         </main>
       </div>
     </div>

@@ -102,3 +102,9 @@
 .mt-120px {
   margin-top: rem(120);
 }
+
+@include breakpoint(medium) {
+  .mb-100px {
+    margin-bottom: rem(60);
+  }
+}

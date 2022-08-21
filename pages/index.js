@@ -28,7 +28,7 @@ function index() {
       <div className="mb-100px">
         <FAQ />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

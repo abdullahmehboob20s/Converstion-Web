@@ -1,3 +1,4 @@
+import Banner from "components/Banner";
 import Button from "components/Button";
 import LatestWinnerCard from "components/LatestWinnerCard";
 import Link from "next/link";
@@ -10,11 +11,9 @@ function Winners() {
       <div className="container-wrapper">
         <div className={styles.wrapper}>
           <div className={styles.left}>
-            <header className="header-banner mb-20px">
-              <h1 className="fs-18px weight-7 white text-center">
-                BIGGEST LOTTERY WINNER
-              </h1>
-            </header>
+            <div className="mb-20px">
+              <Banner title="BIGGEST LOTTERY WINNER" />
+            </div>
 
             <main>
               <div className={`${styles.left_title} mb-25px`}>
@@ -73,11 +72,9 @@ function Winners() {
             </main>
           </div>
           <div className={styles.right}>
-            <header className="header-banner mb-20px">
-              <h1 className="fs-18px weight-7 white text-center">
-                OUR LATEST WINNERS
-              </h1>
-            </header>
+            <div className="mb-20px">
+              <Banner title="OUR LATEST WINNERS" />
+            </div>
 
             <main>
               <header>

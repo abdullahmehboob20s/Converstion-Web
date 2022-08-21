@@ -47,36 +47,36 @@
         margin-right: u.rem(15);
       }
     }
+  }
 
-    .right {
+  .right {
+    display: flex;
+    align-items: center;
+
+    & > :not(:last-child) {
+      margin-right: u.rem(10);
+    }
+
+    & > a {
       display: flex;
       align-items: center;
+      justify-content: center;
+      width: u.rem(36);
+      height: u.rem(36);
+      color: white;
+      border-radius: 50%;
+      font-size: u.rem(18);
+      cursor: pointer;
+    }
 
-      & > :not(:last-child) {
-        margin-right: u.rem(10);
-      }
-
-      & > a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: u.rem(36);
-        height: u.rem(36);
-        color: white;
-        border-radius: 50%;
-        font-size: u.rem(18);
-        cursor: pointer;
-      }
-
-      & > a:nth-child(1) {
-        background-color: #1877f2;
-      }
-      & > a:nth-child(2) {
-        background-color: #1da1f3;
-      }
-      & > a:nth-child(3) {
-        background-color: #1877f2;
-      }
+    & > a:nth-child(1) {
+      background-color: #1877f2;
+    }
+    & > a:nth-child(2) {
+      background-color: #1da1f3;
+    }
+    & > a:nth-child(3) {
+      background-color: #1877f2;
     }
   }
 
@@ -110,6 +110,84 @@
 
     & > :not(:last-child) {
       margin-right: u.rem(10);
+    }
+  }
+
+  .paymentsAndSecurity {
+    display: grid;
+    gap: u.rem(30);
+
+    .right {
+      display: none;
+    }
+  }
+
+  @include u.breakpoint(medium) {
+    header {
+      .right {
+        display: none;
+      }
+    }
+
+    main {
+      display: grid;
+      flex-direction: column;
+      gap: 2rem;
+
+      & > div:nth-child(2) {
+        max-width: 100%;
+      }
+    }
+
+    .externalLinks {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        margin-bottom: 1rem !important;
+        font-size: 14px !important;
+      }
+    }
+
+    .paymentsAndSecurity {
+      display: grid;
+      grid-template-columns: u.rem(160) u.rem(180);
+      justify-content: space-between;
+
+      .right {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+    }
+
+    .right {
+      & > :not(:last-child) {
+        margin-right: u.rem(8);
+      }
+
+      & > a {
+        width: u.rem(26);
+        height: u.rem(26);
+        font-size: u.rem(14);
+      }
+    }
+  }
+
+  @include u.breakpoint(xsmall) {
+    padding-top: 2rem;
+
+    .stars {
+      top: -4rem;
+      width: 170%;
+    }
+
+    .paymentsAndSecurity {
+      grid-template-columns: 1fr 1fr;
+
+      h2 {
+        font-size: u.rem(14);
+      }
     }
   }
 }

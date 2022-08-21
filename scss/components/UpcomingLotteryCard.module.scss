@@ -1,6 +1,7 @@
 @use "../utils" as u;
 
 .card {
+  position: relative;
   padding: u.rem(14);
   background: #ffffff;
   border: 1px solid #e0e0e0;
@@ -53,5 +54,31 @@
 
   & > :not(:last-child) {
     margin-right: u.rem(5);
+  }
+}
+
+.star {
+  color: #f7d300;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+}
+
+@include u.breakpoint(small) {
+  .imageBox {
+    width: u.rem(70);
+    height: u.rem(70);
+    margin-bottom: u.rem(20);
+  }
+}
+@include u.breakpoint(xsmall) {
+  .card {
+    padding: u.rem(10);
+    padding-top: u.rem(18);
+  }
+
+  .star {
+    font-size: 1rem;
   }
 }

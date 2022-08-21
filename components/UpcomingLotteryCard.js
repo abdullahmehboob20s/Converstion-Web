@@ -1,10 +1,15 @@
 import React from "react";
 import styles from "scss/components/UpcomingLotteryCard.module.scss";
 import { FiClock } from "react-icons/fi";
+import { FaStar } from "react-icons/fa";
 
 function UpcomingLotteryCard() {
   return (
     <div className={styles.card}>
+      <span className={styles.star}>
+        <FaStar />
+      </span>
+
       <div className={styles.imageBox}>
         <img src="images/mega.png" alt="" />
       </div>

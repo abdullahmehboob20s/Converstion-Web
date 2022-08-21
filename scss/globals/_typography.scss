@@ -283,6 +283,7 @@ a {
 
 @include u.breakpoint(large) {
   :root {
+    --fs-20px: #{u.rem(18)};
     --fs-24px: #{u.rem(18)};
     --fs-26px: #{u.rem(22)};
   }

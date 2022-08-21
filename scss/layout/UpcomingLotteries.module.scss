@@ -5,3 +5,14 @@
   grid-template-columns: repeat(5, 1fr);
   gap: u.rem(15);
 }
+
+@include u.breakpoint(xLarge) {
+  .card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@include u.breakpoint(medium) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

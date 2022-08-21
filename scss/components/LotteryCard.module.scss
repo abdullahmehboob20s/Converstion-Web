@@ -73,4 +73,19 @@
       }
     }
   }
+
+  @include u.breakpoint(large) {
+    main {
+      padding: u.rem(16) u.rem(0);
+
+      .imageWrapper {
+        width: u.rem(120);
+        height: u.rem(82);
+      }
+
+      & > :not(:last-child) {
+        margin-right: u.rem(18);
+      }
+    }
+  }
 }

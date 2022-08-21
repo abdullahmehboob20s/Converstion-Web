@@ -280,3 +280,10 @@ a {
 .hover-underline:hover {
   text-decoration: underline;
 }
+
+@include u.breakpoint(large) {
+  :root {
+    --fs-24px: #{u.rem(18)};
+    --fs-26px: #{u.rem(22)};
+  }
+}

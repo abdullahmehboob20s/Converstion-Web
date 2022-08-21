@@ -1,3 +1,4 @@
+import FAQ from "layouts/FAQ";
 import Hero from "layouts/Hero";
 import Lottery from "layouts/Lottery";
 import Navbar from "layouts/Navbar";
@@ -22,6 +23,9 @@ function index() {
       </div>
       <div className="mb-100px">
         <Winners />
+      </div>
+      <div className="mb-100px">
+        <FAQ />
       </div>
     </div>
   );

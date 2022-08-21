@@ -1,13 +1,18 @@
 import HeroCard from "components/HeroCard";
+import useMediaQuery from "hooks/useMediaQuery";
 import React from "react";
 import styles from "scss/layout/Hero.module.scss";
 
 function Hero() {
+  const isBellow500px = useMediaQuery("(max-width : 31.25em)");
+
   return (
     <div>
-      <div className="container-wrapper">
+      <div className={isBellow500px ? "" : `container-wrapper`}>
         <img src="images/hero-banner.png" className="w-full mb-20px" alt="" />
+      </div>
 
+      <div className="container-wrapper">
         <div className={styles.cards}>
           <HeroCard
             icon="images/laptop.png"

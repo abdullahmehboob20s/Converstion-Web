@@ -13,10 +13,10 @@ function index() {
       <div className="mb-20px">
         <Navbar />
       </div>
-      {/* <div className="mb-100px">
+      <div className="mb-100px">
         <Hero />
       </div>
-      <div className="mb-100px">
+      {/* <div className="mb-100px">
         <Lottery />
       </div>
       <div className="mb-100px">

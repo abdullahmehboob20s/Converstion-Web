@@ -11,6 +11,11 @@
     padding: u.rem(14) u.rem(18);
     cursor: pointer;
 
+    & > p {
+      text-align: left;
+      margin-right: 1rem;
+    }
+
     & > span {
       display: flex;
       font-size: 1.4rem;
@@ -34,6 +39,16 @@
     & > button {
       & > span {
         transform: rotate(180deg);
+      }
+    }
+  }
+
+  @include u.breakpoint(small) {
+    & > button {
+      padding: u.rem(14) u.rem(10);
+
+      & > p {
+        font-size: 1rem !important;
       }
     }
   }

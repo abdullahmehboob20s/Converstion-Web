@@ -1,8 +1,16 @@
+@use "../utils" as u;
+
 .wrapper {
-  width: 66%;
+  max-width: 66%;
 }
 
 .faqs {
   display: grid;
   gap: 0.5rem;
+}
+
+@include u.breakpoint(large) {
+  .wrapper {
+    max-width: 100%;
+  }
 }

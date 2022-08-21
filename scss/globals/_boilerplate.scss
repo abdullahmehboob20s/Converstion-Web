@@ -35,3 +35,9 @@ body {
 .border {
   border: 2px solid red;
 }
+
+.header-banner {
+  padding: u.rem(10);
+  background: #f30000;
+  border-radius: u.rem(8);
+}

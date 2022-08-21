@@ -1,0 +1,57 @@
+@use "../utils" as u;
+
+.card {
+  padding: u.rem(14);
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: u.rem(8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > button {
+    width: 100%;
+    padding: u.rem(9);
+    background: #f7d300;
+    border-radius: u.rem(8);
+  }
+}
+
+.imageBox {
+  width: u.rem(96);
+  height: u.rem(96);
+  border: u.rem(2) solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: u.rem(28);
+
+  img {
+    width: 87%;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > :not(:last-child) {
+    margin-right: u.rem(5);
+  }
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+
+  & > span {
+    display: flex;
+    font-size: 1.2rem;
+  }
+
+  & > :not(:last-child) {
+    margin-right: u.rem(5);
+  }
+}
